@@ -1,0 +1,278 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    font-size: 20px;
+}
+
+/** Parte del Nav **/
+#navbar{
+    align-items: center;
+    background-color: rgb(190, 23, 23);
+    display: flex;
+    height: 4rem;
+    justify-content: flex-end;
+    position: fixed;
+    width: 100%;
+}
+
+#navbar #list-nav-items{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+#navbar #list-nav-items #items{
+    margin-right: 2rem;
+    font-size: larger;
+}
+
+#navbar #list-nav-items #items a{
+    text-decoration: none;
+    color: white;
+}
+
+/** FIN Parte del Nav **/
+
+/** Parte del Section Welcome **/
+#welcome-section{
+    background: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+#welcome-section .presentation{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#welcome-section .presentation h1{
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+#welcome-section .presentation p{
+    font-size: 2rem;
+    color: red;
+    font-style: italic;
+}
+
+/** Fin Parte del Section Welcome **/
+
+#projects {
+    background-color: burlywood;
+    padding: 5rem 2rem;
+}
+
+#projects .project-tile{
+    font-size: 3rem;
+    margin: 0 auto 6rem auto;
+    text-align: center;
+    border-bottom: #FFF solid 2px;
+}
+
+#projects .projects-group{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 4rem;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+    height: 100%;
+    justify-items: center;
+}
+
+#projects .projects-group .card{
+    /* border: #181719 solid 2px; */
+    width: 350px;
+    height: auto;
+    display: grid;
+    background-color: white;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+#projects .card{
+    width: auto;
+    height: auto;
+    display: grid;
+    justify-items: center;
+    background-color: white;
+    border-radius: 10px;
+}
+
+#projects .card .card-info{
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    padding: 5px;
+    color: rgb(32, 32, 117);
+    text-decoration: none;
+}
+
+#projects .projects-group .card img{
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    border-radius: 10px;
+}
+
+#projects .projects-group .card .card-info{
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    padding: 5px;
+    color: rgb(32, 32, 117);
+    text-decoration: none;
+}
+
+/* fin de la parte de proyectos */
+
+/* INICIO DE LA PARTE DE CONTACTO */
+#contact {
+    background-color: #181719;
+    padding: 5rem 2rem;
+    width: auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact .title {
+    overflow: hidden;
+}
+
+#contact .title h1 {
+    font-size: 4rem;
+    margin: 0 auto 0 auto;
+    text-align: center;
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+
+#contact .title p {
+    font-size: 1.5rem;
+    margin: 15px auto 0 auto;
+    text-align: center;
+    color: white;
+    font-style: italic;
+    font-weight: 100;
+}
+
+#contact .cards {
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 15px;
+    grid-gap: 15px;
+    justify-items: center;
+}
+
+#contact .cards .card {
+    background-color: aliceblue;
+    width: 100%;
+    height: auto;
+    display: grid;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+#contact .cards .card a{
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+#contact .cards .card a span{
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+/* fin de contact */
+
+/* Footer */
+
+footer{
+    background-color: black;
+    padding: 10px;
+}
+
+footer p{
+    text-align: center;
+}
+
+/* Fin de Footer */
+
+/* Media Query */
+
+@media screen and (min-width: 630px) {
+    #welcome-section .presentation h1{
+         font-size: 3rem;
+         font-weight: bold;
+         color: white;
+         margin-bottom: 0;
+         text-align: center;
+    }
+
+    #contact .cards {
+        margin-top: 15px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 15px;
+        grid-gap: 15px;
+        justify-items: center;
+    }
+ }
+
+/* Fin de media Query */
+
+/* Animaciones */
+
+#contact .cards .card:hover {
+    animation-duration: 1s;
+    animation-name: bounce;  
+    animation-fill-mode: forwards;  
+}
+
+@keyframes bounce {
+    from {
+        background-color: aliceblue;
+    }
+
+    to{
+        background-color: rgb(236, 135, 135);
+    }
+}
+  
+  @keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+
+/* Fin de Animaciones */
